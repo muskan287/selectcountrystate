@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Result</title>
+</head>
+<body>
+	<h1>Selected Country and State</h1>
+	<p>Country: <span id="country"></span></p>
+	<p>State: <span id="state"></span></p>
+	
+	<script>
+		const params = new URLSearchParams(window.location.search);
+		const selectedCountry = params.get("country");
+		const selectedState = params.get("state");
+		
+		document.getElementById("country").textContent = selectedCountry;
+		document.getElementById("state").textContent = selectedState;
+	</script>
+</body>
+</html>
